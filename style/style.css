@@ -1,0 +1,605 @@
+/*verification de la taille et positionnement des boites quand activés (enlevé commentaire) */
+/* div,
+p,
+nav,
+h2,
+h3 {
+    border: dotted 1px blue;
+} */
+
+
+/* POLICES */
+/* Import google fontRajdhani + Space grotesk (alternative à l'utilisation des polices)*/
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url(../police/Rajdhani/Rajdhani-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(../police/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+/* Mise à zéro des marges par défauts et box-sizing*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Effet fadeIn sur tous les éléments */
+h2, h3, h4, figure, img, li, p, .btnContain__btn  {
+    animation: fadeIn 5s normal;
+    -webkit-animation: fadeIn 5s normal;
+    -o-animation: fadeIn 5s normal;
+
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* Définition des couleurs de base */
+
+:root {
+    --myYellow: #FFFF00;
+    --myGrey50: #c4c4c450;
+    --myGreyfull: #c4c4c4;
+    --myGreyBorder: #bcbbbd44;
+    --myMarineBleu: #19587D;
+}
+
+/*Typographie*/
+html {
+    font-family: 'Space Grotesk';
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+p {
+    text-align: justify;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Rajdhani';
+    font-weight: 600;
+}
+
+h2 + p {
+    margin: 20px 0;
+}
+
+/* J'ai mis les titres de chaque section en h2 car pour le référencement, il est préféréble de n'avoir qu'un h1 dans chaque page */
+h2 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+/*background*/
+html {
+    background-image: url(../assets/illustrations/Bathome1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+}
+
+/*border et formatage général des contenus*/
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        min-width: 400px;
+        margin: 0 7.5%;
+        border-left: solid 2px var(--myGreyBorder);
+        border-right: solid 2px var(--myGreyBorder);
+    }
+}
+
+header {
+    border-bottom: solid 2px var(--myGreyBorder);
+}
+
+main {
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        padding: 0 10%;
+    }
+}
+
+section {
+    margin: 100px 0;
+}
+
+/*Bouton*/
+.btnContain {
+    display: flex;
+    justify-content: center;
+}
+
+.btnContain__btn {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin: 0 10px;
+    background: linear-gradient(80deg, #EDDEBF40, #89000860);
+}
+
+.btnContain__btn:hover,
+.btnContain__btn:focus {
+    background: linear-gradient(80deg, #EDDEBF, #890008);
+    cursor:pointer;
+}
+
+.btnContain__btn a,
+.btnContain__btn {
+    font-family: 'Rajdhani';
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
+/*Images d'illustrations Alliés et ennemies*/
+.illPic {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+}
+
+.illPic figure {
+    width: 30%;
+    margin: 0;
+}
+
+.illPic img {
+    width: 100%;
+}
+
+.illPic figcaption {
+    text-align: center;
+    font-family: 'Rajdhani';
+    margin-top: 15px;
+}
+
+.illPic figure:hover {
+    transform: scale(1.1);
+}
+
+
+/*header et navigation*/
+.header {
+    height: 150px;  /* 132px dans l'énoncé mais 150px ressemble plus à la maquette */
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration-line: none;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header ul li a:hover {
+    font-weight: bold;
+    color: var(--myYellow);
+    text-decoration-line: underline;
+}
+
+.header ul li:nth-child(1) a {
+    /*HOME en gras et souligné sur la page active*/
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.header ul li {
+    margin: 5px 15px;
+}
+
+/* ASIDE:Icônes latéraux de réseaux sociaux */
+aside {
+    position: sticky;
+    top: 5px;
+}
+
+aside figure {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+aside img {
+    max-width: 75px;
+}
+
+
+@media screen and (min-width: 500px) {
+    aside figure {
+        display: initial;
+    }
+    aside {
+        position: fixed;
+        right: calc(7.5% - 52px);
+        top: 200px;
+    }
+    
+    aside figure div {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    aside img {
+        max-width: none;
+    }
+}
+
+/* Appliquer la couleur jaune en utilisant css filter generator from white to target hex color (codepen.io) => réduire invert à proche de zéro */
+aside img:hover, header img:hover {
+    filter: invert(4%) sepia(99%) saturate(5553%) hue-rotate(358deg) brightness(109%) contrast(102%);
+    -webkit-filter: invert(4%) sepia(99%) saturate(5553%) hue-rotate(358deg) brightness(109%) contrast(102%);
+}
+
+/*SECTION 1*/
+.sect1 {
+    margin: 200px auto;
+    width: 60%;
+    min-width: 350px;
+}
+
+.sect1__contentDiv {
+    margin: 30px 0;
+}
+
+.sect1 p,
+.sect1 h3 {
+    text-align: center;
+}
+
+.sect1__isBatmanTxt {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*SECTION 2: Batman au cinéma*/
+.sec2__firstBigArrow {
+    margin: 70px 0;
+    text-align: center;
+}
+
+
+/*SECTION 3 : Némésis*/
+.sec3__logo {
+    position: relative;
+    width: 100px;
+    top: 0;
+    right: 5%;
+}
+
+
+/* SECTION 4 Alliés*/
+.sec4__TitleSideImgContain {
+    display: flex;
+    align-items: flex-end;
+}
+
+.sec4__TitleSideImgContain__divImg {
+    height: 25vw;
+    position: absolute;
+    right: 0;
+}
+
+.sec4__TitleSideImgContain__divImg img {
+    height: 100%;
+    opacity: 75%;
+}
+
+.sec4 p {
+    margin: 20px 0
+}
+
+
+/*SECTION 5 : Justice League*/
+.sec5 p {
+    margin-bottom: 70px;
+}
+.sec5__divImg {
+    overflow: visible;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sec5__divImg img {
+    width: 100vw;
+}
+
+
+/*SECTION 6 : multimédia*/
+.sec6__carrousContain {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.sec6__carrousContain button{
+    background: none;
+    border: none;
+    border: none;
+}
+
+.sec6__carrousContain button:hover {
+    filter: brightness(200%);
+}
+
+.sec6__carrousContain__main {
+    width: 60%;
+    min-width: 300px;
+    display: flex;
+}
+
+.sec6__carrousContain__main__imgContainer {
+    display: flex;
+    align-items: center;
+}
+
+.sec6__carrousContain__main__mediaDescription {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #EDDEBF60, #19587D60);
+    border-radius: 0 10px 10px 0;
+    padding: 5px;
+}
+
+.sec6__carrousContain__main__mediaDescription a {
+    color: white;
+    text-decoration: none;
+}
+
+.sec6__carrousContain__main__mediaDescription__component {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.sec6__carrousContain__main__mediaDescription span {
+    color: #FFFF00;
+}
+
+.sec6__videoDiv__video {
+    width: 100%;
+}
+
+
+/* SECTION 7: Formulaire */
+.sec7 {
+    background: linear-gradient(135deg, #EDDEBF60, #19587D60);
+    padding: 20px 15%;
+    min-width: 350px;
+}
+
+.sec7__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sec7__form__div {
+    margin: 30px 0 10px;
+}
+
+.sec7__form__div__h4 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec7__form__div__input,
+.sec7__form__div__checkbox,
+.sec7__form__div__fieldset__legend,
+.sec7__form__div__textarea,
+.sec7__form__div__frequence,
+.sec7__form__div__selectContainer__select {
+    color: rgba(255, 255, 255, 0.5);
+    background: none;
+    border: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    margin: 10px 0;
+    width: 100%
+}
+
+.sec7__form__div__frequence {
+    border-bottom: none;
+}
+
+.sec7__form__div__selectContainer select option {
+    background-color:grey;
+}
+
+.sec7__form__div__checkbox {
+    border-bottom: none;
+    margin: 10px 0 20px;
+    width: 70%;
+    min-width: 250px;
+}
+
+.sec7__form__div__checkbox input[type="checkbox"] {
+    	position: relative;
+        bottom: -3px;
+        right: -5px;
+}
+
+fieldset {
+    border: none;
+}
+
+.sec7__form__div__fieldset__radioContain {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Transformer radio en bouton */
+.sec7__form__div__fieldset__radioContain__choice {
+    display: none;
+}
+
+.sec7__form__div__fieldset__radioContain__choice + label {
+    width: 70px;
+    padding: 5px 0;
+    margin: 5px; 
+    font-size: 12px;
+    font-family: Rajdhani;
+    text-align: center;
+    border-image: linear-gradient(60deg,var(--myGrey50), var(--myMarineBleu)) 1 / 1.5px;
+    -o-border-image: linear-gradient(60deg,var(--myGrey50), var(--myMarineBleu)) 1 / 1.5px;
+}
+
+.sec7__form__div__fieldset__radioContain__choice+ label:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor:pointer;
+}
+
+.sec7__form__div__fieldset__radioContain__choice:checked + label {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sec7__form__div textarea::placeholder {
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+}
+
+.sec7__form__submit {
+    text-align: center;
+}
+
+.sec7__form__submit button {
+    border: none;
+}
+
+/* SECTION 8: Citations */
+.sec8 {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        url(../assets/logo/icon_guillemets_1.png)no-repeat top left,
+        url(../assets/logo/icon_guillemets_2.png) no-repeat bottom right;
+}
+
+.sec8__figure {
+    width: 40%;
+    margin: 75px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.sec8__figure blockquote p{
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sec8__figure figcaption {
+    margin: 10px 0;
+}
+
+.sec8__figure figcaption,
+.sec8__figure figcaption cite {
+    font-style: normal;
+    color: var(--myGreyfull);
+    line-height: 1.9;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    font-size: 10px;
+    text-align: center;
+    color: var(--myGreyfull);
+    margin: 20px 0
+}
+
+footer p img {
+    position: relative;
+    bottom: -10px;
+}
+
+footer figure {
+    display: flex;
+    align-items: center;
+}
+
+footer figure img{
+    margin: 0 10px;
+}
+
+/*Effet de transition au scroll - fade in */
+.reveal {
+    opacity : 0;
+    transform : translateX(-50px);
+}
+
+.reveal-visible {
+    opacity : 1;
+    transform: translateX(0);
+    transition: 1.5s
+}

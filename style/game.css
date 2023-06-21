@@ -1,0 +1,282 @@
+/*verification de la taille et positionnement des boites quand activés (enlevé commentaire) */
+/* div,
+p,
+nav,
+h2,
+h3 {
+    border: dotted 1px blue;
+} */
+
+
+/* POLICES */
+/* Import google fontRajdhani + Space grotesk (alternative à l'utilisation des polices)*/
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url(../police/Rajdhani/Rajdhani-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(../police/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+/* Mise à zéro des marges par défauts et box-sizing*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définition des couleurs de base */
+
+:root {
+    --myYellow: #FFFF00;
+    --myGrey50: #c4c4c450;
+    --myGreyfull: #c4c4c4;
+    --myGreyBorder: #bcbbbd44;
+    --myMarineBleu: #19587D;
+}
+
+/*Typographie*/
+html {
+    font-family: 'Space Grotesk';
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+p {
+    text-align: justify;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Rajdhani';
+    font-weight: 600;
+}
+
+h2 + p {
+    margin: 20px 0;
+}
+
+/* J'ai mis les titres de chaque section en h2 car pour le référencement, il est préféréble de n'avoir qu'un h1 dans chaque page */
+
+h4 {
+    font-size: 12px;
+}
+
+/*background*/
+html {
+    background-image: url(../assets/Illustrations_game/Batgame_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+}
+
+/*border et formatage général des contenus*/
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        min-width: 400px;
+        margin: 0 7.5%;
+        border-left: solid 2px var(--myGreyBorder);
+        border-right: solid 2px var(--myGreyBorder);
+    }
+}
+
+header {
+    border-bottom: solid 2px var(--myGreyBorder);
+}
+
+main {
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        padding: 0 10%;
+    }
+}
+
+section {
+    margin: 100px 0;
+}
+
+/*Bouton*/
+.btnContain {
+    display: flex;
+    justify-content: center;
+}
+
+.btnContain__btn {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin: 0 10px;
+    background: linear-gradient(80deg, #EDDEBF40, #a57102);
+}
+
+.btnContain__btn:hover,
+.btnContain__btn:focus {
+    background: linear-gradient(80deg, #EDDEBF, #a57102);
+    cursor:pointer;
+}
+
+.btnContain__btn a,
+.btnContain__btn {
+    font-family: 'Rajdhani';
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*header et navigation*/
+.header {
+    height: 150px;  /* 132px dans l'énoncé mais 150px ressemble plus à la maquette */
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration-line: none;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header ul li a:hover {
+    font-weight: bold;
+    color: var(--myYellow);
+    text-decoration-line: underline;
+}
+
+.header ul li:nth-child(2) a {
+    /*HOME en gras et souligné sur la page active*/
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.header ul li {
+    margin: 5px 15px;
+}
+
+/* ASIDE:Icônes latéraux de réseaux sociaux */
+aside {
+    position: sticky;
+    top: 5px;
+}
+
+aside figure {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+aside img {
+    max-width: 75px;
+}
+
+
+@media screen and (min-width: 500px) {
+    aside figure {
+        display: initial;
+    }
+    aside {
+        position: fixed;
+        right: calc(7.5% - 52px);
+        top: 200px;
+    }
+    
+    aside figure div {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    aside img {
+        max-width: none;
+    }
+}
+
+/* Appliquer la couleur jaune en utilisant css filter generator from white to target hex color (codepen.io) => réduire invert à proche de zéro */
+aside img:hover, header img:hover {
+    filter: invert(4%) sepia(99%) saturate(5553%) hue-rotate(358deg) brightness(109%) contrast(102%);
+    -webkit-filter: invert(4%) sepia(99%) saturate(5553%) hue-rotate(358deg) brightness(109%) contrast(102%);
+}
+
+/*SECTION 1*/
+.sect1 {
+    margin: 250px 0 350px;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform:uppercase;
+}
+
+/*SECTION 2: Batman au cinéma*/
+.sec2__firstBigArrow {
+    margin: 70px 0;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#sec2 img {
+    margin: 15px 0 50px;
+}
+
+/* FOOTER */
+footer {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    font-size: 10px;
+    text-align: center;
+    color: var(--myGreyfull);
+    margin: 20px 0
+}
+
+footer p img {
+    position: relative;
+    bottom: -10px;
+}
+
+footer figure {
+    display: flex;
+    align-items: center;
+}
+
+footer figure img{
+    margin: 0 10px;
+}

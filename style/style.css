@@ -226,6 +226,7 @@ section {
     font-family: 'Rajdhani';
     font-size: 20px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .header ul li a:hover {
@@ -602,4 +603,10 @@ footer figure img{
     opacity : 1;
     transform: translateX(0);
     transition: 1.5s
+}
+
+/*Zoom image au scroll */
+.try {
+    width: 100vw;
+    height: 800px
 }

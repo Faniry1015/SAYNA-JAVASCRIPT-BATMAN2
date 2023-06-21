@@ -1,0 +1,23 @@
+.popupBox {
+    background: linear-gradient(135deg, #EDDEBF, #19587D);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    top:300px;
+    position: fixed ;
+    left: 25%;
+    z-index: 2;
+    display: none;
+}
+
+.inside {
+    padding: 50px;
+    margin: 30px;
+    border-radius: 20px;
+    background-color: #19587D;
+    box-shadow: 2px 2px 40px black ;
+}
+
+.inside h1 {
+    text-transform: uppercase;
+}

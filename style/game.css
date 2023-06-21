@@ -1,11 +1,11 @@
 /*verification de la taille et positionnement des boites quand activés (enlevé commentaire) */
-/* div,
+div,
 p,
 nav,
 h2,
 h3 {
     border: dotted 1px blue;
-} */
+}
 
 
 /* POLICES */
@@ -120,12 +120,12 @@ section {
     width: 200px;
     padding: 10px;
     margin: 0 10px;
-    background: linear-gradient(80deg, #EDDEBF40, #a57102);
+    background: linear-gradient(80deg, #EDDEBF40, #c28d1c);
 }
 
 .btnContain__btn:hover,
 .btnContain__btn:focus {
-    background: linear-gradient(80deg, #EDDEBF, #a57102);
+    background: linear-gradient(80deg, #EDDEBF, #c28d1c);
     cursor:pointer;
 }
 
@@ -248,8 +248,9 @@ h2 {
     text-align: center;
 }
 
-#sec2 img {
-    margin: 15px 0 50px;
+.illPic {
+    margin: 15px auto 50px;
+    text-align: center;
 }
 
 /* FOOTER */

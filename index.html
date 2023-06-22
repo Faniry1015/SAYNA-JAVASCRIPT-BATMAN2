@@ -311,9 +311,7 @@
                             <label for="newsletter">En cochant cette case vous acceptez de recevoir l'actualité
                                 concernant
                                 les aventures de Batman:</label>
-                            <input type="checkbox" name="newsletter" id="newsletter">
-                            <!--Message de d'invalidation JS-->
-                            <span class="notChecked"></span>
+                            <input type="checkbox" required name="newsletter" id="newsletter">
                         </div>
 
                         <div class="sec7__form__div__selectContainer">
@@ -354,6 +352,8 @@
                         <h4 class="sec7__form__div__h4">MESSAGE</h4>
                         <textarea class="sec7__form__div__textarea" name="message" id="message" cols="30" rows="1"
                             placeholder="Laissez un commentaire pour la communauté"></textarea>
+                        <!--Message de d'invalidation JS-->
+                        <span class="warningMessage"></span>
                     </div>
 
                     <div class="sec7__form__submit">

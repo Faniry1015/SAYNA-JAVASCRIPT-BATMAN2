@@ -1,21 +1,24 @@
 .popupBox {
-    background: linear-gradient(135deg, #EDDEBF, #19587D);
-    width: 50%;
+    background: linear-gradient(135deg, #EDDEBF70, #19587D70);
+    background-color: black;
+    width: 80%;
     margin: auto;
-    text-align: center;
-    top:300px;
+    top: 25vh;
+    left:10vw;
     position: fixed ;
-    left: 25%;
     z-index: 2;
     display: none;
 }
 
 .inside {
-    padding: 50px;
-    margin: 30px;
+    height: calc(50vh);
+    margin: 50px;
     border-radius: 20px;
-    background-color: #19587D;
-    box-shadow: 2px 2px 40px black ;
+    background: linear-gradient(135deg, #EDDEBF60, #19587D60);
+    box-shadow: 1px 1px 40px black ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inside h1 {

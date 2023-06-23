@@ -237,7 +237,7 @@ h1 {
     text-transform:uppercase;
 }
 
-/*SECTION 2: Batman au cinéma*/
+/*SECTION 2*/
 .sec2__firstBigArrow {
     margin: 70px 0;
     text-align: center;
@@ -251,6 +251,11 @@ h2 {
 .illPic {
     margin: 15px auto 50px;
     text-align: center;
+}
+
+/* QUIZZ */
+#questionnaire {
+    display: none
 }
 
 /* FOOTER */

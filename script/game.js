@@ -16,7 +16,6 @@ async function main() {
         const totalQ = QBase.length
         let curQId = 1
         let curScore = 0
-        let questionIndex = 1
 
         //Démarrer le QUIZZ
         function showQ() {
@@ -64,7 +63,7 @@ async function main() {
             }
         }
 
-        //Check answer and add point
+        //Check answer and add point (Règle: choix multiple ; Une faute = 0 point)
         function checkAnswer() {
             let answer = false
             const allCheckbox = document.querySelectorAll(".checkB")
@@ -93,8 +92,7 @@ async function main() {
                 document.querySelectorAll(".choicesDiv").forEach(div => div.remove())
 
                 currentQ.innerText = ""
-                createCurrentQuestionnaire(QBase[questionIndex])
-                questionIndex++
+                createCurrentQuestionnaire(QBase[curQId])
 
                 const totQNbrSpan = document.querySelector("#totalQNbr")
                 totQNbrSpan.innerText = totalQ
@@ -103,8 +101,11 @@ async function main() {
                 currentQId.innerText = ++curQId
                 console.log(curQId, totalQ)
 
+                const setImg = document.querySelector("#imgQuizz")
+                setImg.setAttribute("src", "./assets/Illustrations_game/Batgame_"+ (2 + curQId) + ".png")
+
                 if (curQId === totalQ) {
-                    const questions = document.querySelector(".nextDiv")
+                    const questions = document.querySelector(".questions")
                     questions.style.display = "none"
                     const showR = document.querySelector(".showDiv")
                     showR.style.display = "block"
@@ -121,7 +122,7 @@ async function main() {
         })
 
     } catch (e) {
-        console.log("Impossible d'accèder au serveur", e)
+        console.log("Erreur de chargement du questionnaire", e)
     }
 }
 

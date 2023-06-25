@@ -130,7 +130,8 @@ section {
 }
 
 .btnContain__btn a,
-.btnContain__btn {
+.btnContain__btn,
+.btnContain__btn button {
     font-family: 'Rajdhani';
     font-size: medium;
     font-weight: 400;
@@ -255,6 +256,10 @@ h2 {
 
 /* QUIZZ */
 #questionnaire {
+    display: none
+}
+
+.showDiv {
     display: none
 }
 

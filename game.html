@@ -95,7 +95,8 @@
         <section id="questionnaire">
             <div class="questions">
                 <h2 class="nbreQuestions">
-                    <span id="currentQId"><!--N° Question actuelle--></span>/ <span id="totalQNbr"><!--Nbr total de question--></span>
+                    <span id="currentQId"><!--N° Question actuelle--></span>/ <span
+                        id="totalQNbr"><!--Nbr total de question--></span>
                 </h2>
                 <div class="card-quizz">
                     <div class="card-image">
@@ -108,13 +109,21 @@
                     <div class="choisirReponse">
                         <!--Choix de reponse-->
                     </div>
-                    <div>
-                        <button class="nextBtn">Question suivante</button>
+
+                    <div class="sect2__contentDiv btnContain nextDiv">
+                        <div class="btnContain__btn" id="nextBtn">
+                            <a class="nextBtn">Question suivante</a>
+                        </div>
                     </div>
-        
                 </div>
             </div>
 
+            <!--Show Result-->
+            <div class="sect2__contentDiv btnContain showDiv">
+                <div class="btnContain__btn" id="showResult">
+                    <a class="showResult">Voir le résultat</a>
+                </div>
+            </div>
         </section>
     </main>
 

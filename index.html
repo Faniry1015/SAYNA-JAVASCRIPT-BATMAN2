@@ -8,19 +8,14 @@
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/popupbox.css">
-    
+
     <script src="./script/main.js" defer></script>
     <script src="./script/index.js" defer></script>
+
     <title>Batman | Home</title>
 </head>
 
 <body>
-    <!--PopupBox Message reçu-->
-    <div class="popupBox">
-        <div class="inside">
-            <h1>Message reçu!</h1>
-        </div>
-    </div>
     <!-- ENTETE -->
     <header class="reveal">
         <div class="header">
@@ -43,7 +38,7 @@
         <aside>
             <figure>
                 <div>
-                    <a id="scrollArrow"><img src="assets/logo/logo_bat_flèche.png" alt="Batman tête en bas"></a>
+                    <a class="scrollArrow"><img src="assets/logo/logo_bat_flèche.png" alt="Batman tête en bas"></a>
                 </div>
                 <div>
                     <a href="https://www.facebook.com/frdccomics/?locale=fr_FR"><img src="assets/logo/icon_facebook.png"
@@ -60,7 +55,7 @@
                     </a>
                 </div>
                 <div>
-                    <a id="scrollArrow"><img src="assets/logo/logo_bat_flèche_2.png" alt="Batman tête en haut"></a>
+                    <a class="scrollArrow"><img src="assets/logo/logo_bat_flèche_2.png" alt="Batman tête en haut"></a>
                 </div>
             </figure>
         </aside>
@@ -362,8 +357,14 @@
                     </div>
                 </form>
             </div>
-
         </section>
+
+        <!--PopupBox Message reçu-->
+        <div class="popupBox">
+            <div class="inside">
+                <h1>Message reçu!</h1>
+            </div>
+        </div>
 
         <!-- Section 8: Citations -->
         <section class="reveal">
@@ -382,7 +383,7 @@
     </main>
 
     <!-- PIED DE PAGE -->
-    <footer id="footer reveal">
+    <footer id="footer"  class="reveal">
         <p>
             <img src="assets/logo/icon_WB.png" alt="Warner-Bros">
             Ce projet respecte l’univers cinématographique des

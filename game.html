@@ -17,7 +17,7 @@
 <body>
 
     <!-- ENTETE -->
-    <header>
+    <header class="reveal">
         <div class="header">
             <div class="header__divLogo">
                 <a href="index.html"><img src="assets/logo/logohome.png" alt="Logo Batman Home" class="header__logo"
@@ -61,14 +61,14 @@
         </aside>
 
         <!--Section 1 LET'S PLAY-->
-        <section>
+        <section class="reveal">
             <div class="sect1">
                 <h1>Let's play a <br> Litle game</h1>
             </div>
         </section>
 
         <!--Section 2: Do you know him-->
-        <section id="sec2">
+        <section id="sec2" class="reveal">
             <div class="sec2">
                 <div class="sec2__firstBigArrow">
                     <img src="assets/logo/flèche_down_header.png" alt="Grande flèche vers le bas">
@@ -76,7 +76,7 @@
                 <h2>connaissez vous bien le chevalier noir ?</h2>
 
                 <div>
-                    <div class="illPic">
+                    <div class="knowImgCont">
                         <figure>
                             <img src="assets/Illustrations_game/Batgame_2.png" alt="batman_de_dos">
                         </figure>
@@ -95,19 +95,26 @@
         <section id="questionnaire">
             <div class="questions">
                 <h2 class="nbreQuestions">
-                    <span id="currentQId"><!--N° Question actuelle--></span>/ <span
+                    <span id="currentQId"><!--N° Question actuelle--></span>/<span
                         id="totalQNbr"><!--Nbr total de question--></span>
                 </h2>
                 <div class="card-quizz">
-                    <div class="card-image">
-                        <img id="imgQuizz" src="./assets/Illustrations_game/Batgame_3.png" alt="">
-                    </div>
-                    <div class="card-body-quizz">
-                        <div class="currentQuestion quizz"><!--Question-->
+                    <div id="QImgContainer">
+                        <div class="card-image">
+                            <img id="imgQuizz" src="./assets/Illustrations_game/Batgame_3.png" alt="">
                         </div>
-                    </div>
-                    <div class="choisirReponse">
-                        <!--Choix de reponse-->
+
+                        <div id="mainQ">
+                            <div class="flexPosition">
+                                <div class="card-body-quizz">
+                                    <div class="currentQuestion quizz"><!--Question-->
+                                    </div>
+                                </div>
+                                <div class="choisirReponse">
+                                    <!--Choix de reponse-->
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="sect2__contentDiv btnContain nextDiv">
@@ -115,20 +122,37 @@
                             <a class="nextBtn">Question suivante</a>
                         </div>
                     </div>
+
+                    <!--Show Result-->
+                    <div class="sect2__contentDiv btnContain showDiv">
+                        <div class="btnContain__btn" id="showResult">
+                            <a class="showResult">Voir le résultat</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!--Show Result-->
-            <div class="sect2__contentDiv btnContain showDiv">
-                <div class="btnContain__btn" id="showResult">
-                    <a class="showResult">Voir le résultat</a>
+        <!--Résultat final du Quizz-->
+        <section id="quizzFinal">
+            <div id="quizzFinalContainer">
+                <h2 class="finalNote">
+                    <span id="finalScore"><!--Score finale--></span>/<span
+                        id="totalQuestionNbr"><!--Nbr total de question--></span> <span id="finalShortComment"></span>
+                </h2>
+                <p id="finalLongComment"></p>
+                <div class="btnContain">
+                    <div class="btnContain__btn" id="restartQuizzContainer">
+                        <a class="restartQuizzLink">Recommencer le quiz</a>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
 
     <!-- PIED DE PAGE -->
-    <footer id="footer">
+    <footer id="footer" class="reveal">
         <p>
             <img src="assets/logo/icon_WB.png" alt="Warner-Bros">
             Ce projet respecte l’univers cinématographique des

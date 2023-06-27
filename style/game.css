@@ -381,3 +381,15 @@ footer figure {
 footer figure img{
     margin: 0 10px;
 }
+
+/*Effet de transition au scroll - fade in */
+.reveal {
+    opacity : 0;
+    transform : translateX(-50px);
+}
+
+.reveal-visible {
+    opacity : 1;
+    transform: translateX(0);
+    transition: 1.5s
+}

@@ -156,10 +156,10 @@ async function main() {
             const finalShortComment = document.querySelector("#finalShortComment")
             const finalLongComment = document.querySelector("#finalLongComment")
 
-            if ((score / totalNbreQ * 10) <= 10 / 3) {
+            if ((score / totalNbreQ * 10) <= 4) {
                 finalShortComment.innerText = fShortComBad
                 finalLongComment.innerText = fLongComBad
-            } else if ((score / totalNbreQ * 10) <= 10 / 2) {
+            } else if ((score / totalNbreQ * 10) <= 7) {
                 finalShortComment.innerText = fShortComOk
                 finalLongComment.innerText = fLongComOk
             } else {
@@ -199,7 +199,6 @@ async function main() {
             })
         }
         restartQuizz(QBase)
-
 
     } catch (e) {
         console.log("Erreur de chargement du questionnaire", e)

@@ -290,6 +290,14 @@ aside img:hover, header img:hover {
     -webkit-filter: invert(4%) sepia(99%) saturate(5553%) hue-rotate(358deg) brightness(109%) contrast(102%);
 }
 
+/**Image qui suit la souris */
+#mouseImg{
+    position:absolute;
+    display:block;
+    width: 50px;
+    z-index:5;
+  }
+
 /*SECTION 1*/
 .sect1 {
     margin: 200px auto;

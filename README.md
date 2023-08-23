@@ -1,2 +1,2 @@
 # SAYNA-JAVASCRIPT-BATMAN2-
-Projet fil rouge Javascript SAYNA - DCLIC 2022
+Javascript common thread project during my SAYNA studies
